@@ -225,7 +225,3 @@ npm run build
 ## 📄 Licence
 
 Propriétaire - Vendor Tablet
-
----
-
-**Développé avec ❤️ pour Vendor Tablet**
