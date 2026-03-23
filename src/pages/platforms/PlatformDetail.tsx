@@ -72,7 +72,7 @@ export default function PlatformDetail() {
                     <h1 className="text-3xl font-black italic tracking-tighter uppercase underline decoration-primary/30 underline-offset-8">Détails de la plateforme</h1>
                 </div>
                 <div className="flex items-center gap-3">
-                    <RoleGuard permissions={['PLATFORMS_CREATE']}>
+                    <RoleGuard permissions={['ROLE_PLATFORM_CREATE']}>
                         <Button
                             variant={platform.adminAccountCreated ? "secondary" : "default"}
                             onClick={handleAdminAction}
@@ -86,7 +86,7 @@ export default function PlatformDetail() {
                             )}
                         </Button>
                     </RoleGuard>
-                    <RoleGuard permissions={['PLATFORMS_EDIT']}>
+                    <RoleGuard permissions={['ROLE_PLATFORM_UPDATE']}>
                         <Button onClick={() => setIsSheetOpen(true)}>
                             Modifier
                         </Button>

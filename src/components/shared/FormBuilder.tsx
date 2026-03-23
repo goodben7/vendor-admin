@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
@@ -19,7 +18,7 @@ export interface FormField {
 
 interface FormBuilderProps {
     fields: FormField[];
-    schema: z.ZodSchema;
+    schema: any;
     onSubmit: (data: any) => void | Promise<void>;
     submitLabel?: string;
     isLoading?: boolean;

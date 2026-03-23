@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useCreateProfile, usePermissions } from '@/hooks/useUsers';
+import { PersonType } from '@/types/entities';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -31,7 +32,7 @@ export default function ProfileFormDialog({ open, onOpenChange }: ProfileFormDia
 
     const [formData, setFormData] = useState({
         label: '',
-        personType: 'SPADM' as string,
+        personType: 'SPADM' as PersonType,
         permission: [] as string[],
         active: true,
     });
@@ -88,7 +89,7 @@ export default function ProfileFormDialog({ open, onOpenChange }: ProfileFormDia
                             <Label htmlFor="personType">Type de personne *</Label>
                             <Select
                                 value={formData.personType}
-                                onValueChange={(value) => setFormData({ ...formData, personType: value })}
+                                onValueChange={(value) => setFormData({ ...formData, personType: value as PersonType })}
                             >
                                 <SelectTrigger>
                                     <SelectValue placeholder="Sélectionnez un type" />

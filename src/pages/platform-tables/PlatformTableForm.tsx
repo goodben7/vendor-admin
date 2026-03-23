@@ -124,7 +124,7 @@ export default function PlatformTableForm() {
                             isLoading={createMutation.isPending || updateMutation.isPending}
                             defaultValues={table ? {
                                 ...table,
-                                platform: table.platform?.id,
+                                platform: typeof table.platform === 'object' ? table.platform?.id : table.platform,
                             } : {}}
                         />
                     </CardContent>

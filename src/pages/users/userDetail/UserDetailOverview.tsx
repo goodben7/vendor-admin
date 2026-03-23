@@ -89,7 +89,7 @@ export default function UserDetail() {
             <Card className="border-none shadow-xl shadow-black/5 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-card to-muted/20">
                 <CardHeader className="relative p-8 pb-0">
                     <div className="absolute top-8 right-8">
-                        <RoleGuard permissions={['USERS_EDIT']}>
+                        <RoleGuard permissions={['ROLE_USER_EDIT']}>
                             <Button
                                 onClick={() => navigate(`/users/${user.id}/profile`)}
                                 className="rounded-xl font-bold flex items-center gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-all"
@@ -246,7 +246,7 @@ export default function UserDetail() {
                             )}>
                                 {!user.locked ? <LockOpen className="w-6 h-6" /> : <Lock className="w-6 h-6" />}
                             </div>
-                            <RoleGuard permissions={['USERS_EDIT']}>
+                            <RoleGuard permissions={['ROLE_USER_EDIT']}>
                                 <Button
                                     variant="ghost"
                                     size="icon"
@@ -343,7 +343,7 @@ export default function UserDetail() {
 
             {/* Quick Actions */}
             <div className="flex flex-wrap gap-4 pt-6 mt-6 border-t border-border/40">
-                <RoleGuard permissions={['USERS_EDIT']}>
+                <RoleGuard permissions={['ROLE_USER_EDIT']}>
                     <Button
                         variant="secondary"
                         className="rounded-xl font-black flex items-center gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-all h-11 px-6 border border-primary/20 shadow-sm"
